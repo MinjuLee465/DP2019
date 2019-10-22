@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>위메프 회원가입</title>
+    </head>
+    <body>
+        <a href="index.html">돌아가기</a>   
+        <h1>회원가입</h1>
+        <style>
+            #form{ width: 50px; }
+        </style>
+        <form>
+            <!-- text, password, radio, checkbox -->
+            <input type="text" placeholder="이메일" value=""/> @<select> 
+                    <option>직접 입력</option>
+                    <option>naver.com</option>
+                    <option>nate.com</option>
+                    <option>gmail.com</option>
+                </select>
+            <br /><input type="password" placeholder="비밀번호" value=""/>
+            <br /><input type="password" placeholder="비밀번호 확인" value=""/>
+            <br /><input type="name" placeholder="이름" value=""/>
+            <br /><br />성별    남자<input type="radio" name="bt1" value="1"/>
+            여자<input type="radio" name="bt1" value="2"/>
+            <br /><br />W캠퍼스 (선택)<select> 
+                
+                    <option>학교 선택</option>
+                    <option>계원예술대학교</option>
+                    <option>서울대학교</option>
+                    <option>고려대학교</option>
+                </select>
+            
+            <br /><br />이용약관 동의(필수)<input type="checkbox" value="1" />
+            <br />개인정보 수집 및 이용 동의(필수)<input type="checkbox" value="1" />
+            <br />개인정보 수집 및 이용 동의(선택)<input type="checkbox" value="1" />
+            <br />*선택항목은 동의하지 않아도 회원가입이 가능합니다.
+            <br /><br /><input type="button" value="회원 가입" />
+            
+        </form>
+    </body>
+</html>
