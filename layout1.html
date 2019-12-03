@@ -8,7 +8,7 @@
             /*border : solid 1px black;*/ /*경계선 긋기*/ 
             /*margin: 10px;*/ /* 서로간에 여유공간 만들기 */
         }
-        header>ul>li{
+        .layout_header li{
             float:left; /* 둥둥떠나니게 : 왼쪽기준 */
             list-style:none; /* 목록-모습(동그라미): 없음 */
             padding-left:10px; /*내부여백-왼쪽 : 10px */
@@ -27,6 +27,9 @@
         }
         header>h1{
             margin: 0px;
+        }
+        header{
+            padding: 10px 50px; /* 상하 좌우 */
         }
         .clear{
             clear: both; /* 지우다: 양쪽*/
@@ -47,8 +50,9 @@
         nav>ul{
             margin: 8px;
         }
-        nav{
+        .layout_header nav{
             background-color: #ddd;
+            padding: 10px 50px;
         }
         #content>div:nth-child(1){
             background-color: #98f;
@@ -84,12 +88,131 @@
             margin-left: 180px; /* 고정값 */
             margin-left: auto; /* 가변값 */
             margin-right: auto; /* 가변값 */
+            
+            padding: 50px 0px; /* 상하 좌우 */
         }
+        footer{
+            background-color: #555;
+            color: #ccc;
+
+            padding: 10px 50px;
+        }
+        footer>div>ul>li{
+            float:left;
+            list-style: none;
+            padding: 0px 10px; /* 상하 좌우 */
+
+            border-right: solid 2px grey;
+        }
+        footer>div>ul>li:nth-child(6){
+            border: none;
+        }
+        footer>div>ul{
+            padding:0px;
+        }
+        footer>ul>li{
+            float: left;
+            list-style: none;
+            padding: 0px 10px; /* 상하 좌우 */
+        }
+        footer>ul{
+            padding:0px;
+        }
+        #footer_left{
+            float: left;
+        }
+        #footer_right{
+            float: right;
+        }
+        #wrap{
+            /* width: 1200px; */ /* 고정값 */
+            min-width: 1100px; /* 최소 넓이 */
+            max-width: 1920px; /* 최대 넓이 */
+            margin-left: auto;
+            margin-right: auto;
+        }
+        body{
+            margin: 0px;
+        }
+        .index_header{
+                background-color: #5D5D5D;
+                color: white;
+                padding: 0px;
+                font-size: 14px;
+            }
+            .index_header>h3{
+                padding: 15px 15px;
+                margin: 0px;
+                font-size: 20px;
+
+            }
+            .index_header li{
+                float: left;
+                list-style: none;
+                padding-left:10px; /*내부여백-왼쪽 : 10px */
+                padding-right:10px; /*내부여백-오른쪽 : 10px */
+                padding-top: 5px;
+            }
+            a:link{ color: #EAEAEA; text-decoration: none; }
+            a:visited{ color: #EAEAEA; }
+            .free_header a:hover{ color: gray; }
+            .free_header a:focus{color: black; }
+            .free_header li:hover{
+                color: gray;
+                font-weight: bold;
+                font-size: 18px;
+            }
+            .free_header nav{
+                padding: 0px 0px 0px 40px;
+                display: block;
+            }
+            .index_header ul{
+                display: block;
+                list-style-type: disc;
+                margin-block-start: 1em;
+                margin-block-end: 1em;
+                margin-inline-start: 0px;
+                margin-inline-end: 0px;
+                padding-inline-start: 40px;
+            }
+            .index_footer{
+                background-color: #5D5D5D;
+                color: #BDBDBD;
+                text-align: right;
+                padding: 8px 15px;
+            }
+            .footerLogo{
+                float: left;
+            }
+            .addrwrap{
+                float: left; margin-left: 50px; font-size: 10px;
+            }
+            .index_footer img{
+                width: 75px; height: 24px;
+                margin: 0px;
+                padding: 5px 30px;
+            }
             </style>
     </head>
     <body>
+            <header class="index_header">
+                    <h3 class="float_left"><a href="index.html">
+                            <!-- div span -->
+                            INDEX
+                        </a></h3>
+                 <nav class="float_right">
+                     <ul id="nav">
+                     <li><a href="free_layout.html">FREE LAYOUT</a></li>
+                     <li><a href="layout1.html">LAYOUT1</a></li>
+                     <li><a href="layout2.html">LAYOUT2</a></li>
+                     <li><a href="layout3.html">LAYOUT3</a></li>
+                     <div class="clear"></div><!-- float left 해제-->
+                  </ul>
+                 </nav>
+                 <div class="clear"></div><!-- float left 해제-->
+        </header>
         <div id="wrap">
-            <header>
+            <header class="layout_header">
                 <h1 class="float_left">
                     <img src="images/layout1_head_logo.jpg"/>
                 </h1>
@@ -266,7 +389,49 @@
                                 </section>
                             </div>
             </div>
-            <footer>footer</footer>
+            <footer>
+            <div id="footer_left">
+                <ul>
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Services</li>
+                    <li>Work</li>
+                    <li>Blog</li>
+                    <li>Contact</li>
+                    <div class="clear"></div><!-- float left 해제-->
+                </ul>
+                <div>ⓒ 2013 BlueBox. All Right Reserved.</div>
+                <div>
+                    the loges in the design are the 
+                    property of their respective owners/copyright holders.
+                </div>
+            </div>
+            <ul id="footer_right">
+                <li><img src="images/layout1_footer_icon1.png"></li>
+                <li><img src="images/layout1_footer_icon2.png"></li>
+                <li><img src="images/layout1_footer_icon3.png"></li>
+                <li><img src="images/layout1_footer_icon4.png"></li>
+                <li><img src="images/layout1_footer_icon5.png"></li>
+                <li><img src="images/layout1_footer_icon6.png"></li>
+                <div class="clear"></div><!-- float left 해제-->
+            </ul>
+            <div class="clear"></div><!-- float left 해제-->
+            </footer>
+            <footer class="index_footer">
+                    <div class="auto">
+                        <span class="footerLogo">
+                            <img src="images/footer_logo.png">
+                        </span>
+                        <div class="addwrap">
+                        <adress class="float_right">
+                                66 Kaywondaehangno(Naeson-dong), Uiwang-si, Gyeonggi-do, Korea
+                                <br />
+                                copyright(c) 2018. Kaywon University of Art & Design.
+                            </adress>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+            </footer>
         </div>
     </body>
 </html>
